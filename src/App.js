@@ -5,10 +5,12 @@ import LoginForm from "./Components/LoginForm";
 import Privacy from "./Components/Privacy";
 import SignUp from "./Components/SignUp";
 import { BrowserRouter as Router, Routes,Route } from "react-router-dom";
+import Navbar from "./Components/Navbar";
 function App() {
   return (
     <div>
       <Router>
+      <Navbar/>
         <Routes>
           <Route path="/" element={<Home/>}></Route>
           <Route path="/privacy" element={<Privacy/>}></Route>
