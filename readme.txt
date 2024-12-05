@@ -1,3 +1,5 @@
 first we will install react router dom. we will use command npm install react-router-dom. 
 once it is installed we can check it in the package.json file. 
 we will remove extra code to start working on our own project. 
+Next we will create components folder and different components in it like home, contact, privacy login info. 
+then import all of them in appjs file.
