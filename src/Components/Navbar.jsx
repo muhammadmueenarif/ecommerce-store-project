@@ -31,11 +31,22 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    <Link to="/">Home</Link>
-                    <Link to="/contact">Contact</Link>
-                    <Link to="/privacy">Privacy</Link>
-                    <Link to="/loginform">Login</Link>
-                    <Link to="/signup">SignUp</Link>
+                    <div className="Nav_links">
+                        <Link to="/" className="link">Home</Link>
+                        <Link to="/contact" className="link">Contact</Link>
+                        <Link to="/privacy" className="link">Privacy</Link>
+                        <Link to="/loginform" className="link">Login</Link>
+                        <Link to="/signup" className="link">SignUp</Link>
+                    </div>
+
+                    <div>
+                        <Link to="/" className="sidebar_link">Home</Link>
+                        <Link to="/contact" className="sidebar_link">Contact</Link>
+                        <Link to="/privacy" className="sidebar_link">Privacy</Link>
+                        <Link to="/loginform" className="sidebar_link">Login</Link>
+                        <Link to="/signup" className="sidebar_link">SignUp</Link>
+                    </div>
+
                 </div>
             </div>
         </div>
