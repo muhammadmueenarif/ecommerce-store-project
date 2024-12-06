@@ -2,13 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Imgrefresher from './images/logo.avif'
 import "./Navbar.css"
+import SearchIcon from "@mui/icons-material/Search"
 const Navbar = () => {
     return (
         <div>
             <div className='navbar_div'>
                 <div>
                     <input type='text' placeholder='Search here' />
-                    {/* search icon */}
+                    <SearchIcon className="Search_icon_input"/>
                     {/* hamburger menu icon */}
                 </div>
 
