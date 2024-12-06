@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom'
 import Imgrefresher from './images/logo.avif'
 import "./Navbar.css"
 import SearchIcon from "@mui/icons-material/Search"
+import MenuIcon from "@mui/icons-material/Menu"
+import CloseIcon from "@mui/icons-material/Close"
+import LocalMallIcon from "@mui/icons-material/LocalMall"
+
 const Navbar = () => {
     return (
         <div>
@@ -10,16 +14,17 @@ const Navbar = () => {
                 <div>
                     <input type='text' placeholder='Search here' />
                     <SearchIcon className="Search_icon_input"/>
-                    {/* hamburger menu icon */}
+                    <CloseIcon className='close_icon'/>
                 </div>
 
                 <div>
                     <div className="navbar_main">
                         <div>
                             <div>
-                                {/* search icon */}
+                                {" "}
+                            <SearchIcon className="Search_icon"/> {" "}
                             </div>
-                            {/* menu icon */}
+                            <MenuIcon className="menu_icon"/>
                         </div>
 
                         <div>
@@ -27,8 +32,9 @@ const Navbar = () => {
                         </div>
 
                         <div className="bad_search">
-                            {/* search icon */}
+                            <SearchIcon className='Search_icon2'/>
                             {/* local icon */}
+                            <LocalMallIcon className="bag_icon"/>
                         </div>
                     </div>
 
