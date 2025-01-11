@@ -1,7 +1,6 @@
 import React from 'react'
 import './Home.css'
-import imgheader from "./images/01.webp"
-
+import Cartform from './Cartform'
 const Home = () => {
   return (
     <div>
@@ -15,6 +14,7 @@ const Home = () => {
         </div>
         </div>
       </div>
+      <Cartform/>
     </div>
   )
 }
