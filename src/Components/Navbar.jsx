@@ -31,10 +31,14 @@ const Navbar = () => {
                 {/* when data value true header will show else no data will show */}
                 <div className={data ? "header" : ""}> 
                     <div className="navbar_main">
-                        <div onClick={inputhandler}>
-                            <SearchIcon className='Search_icon'/>
+
+                    <div>
+                    <div onClick={inputhandler}>
+                        {" "}
+                            <SearchIcon className='Search_icon'/> {" "}
                         </div>
                         <MenuIcon onClick={menuhandler} className='menu_icon'/>
+                    </div>
 
                         <div>
                             <img src={Imgrefresher} className="heading_logo" alt="Logo" />
