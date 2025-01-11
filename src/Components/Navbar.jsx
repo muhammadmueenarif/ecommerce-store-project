@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Imgrefresher from './images/logo.avif'
 import "./Navbar.css"
@@ -8,23 +8,34 @@ import CloseIcon from "@mui/icons-material/Close"
 import LocalMallIcon from "@mui/icons-material/LocalMall"
 
 const Navbar = () => {
+    const [data, setdata] = useState(false);
+    const [menu, setmenu] = useState(false);
+    
+    const inputhandler = ()=> {
+        setdata(!data);
+    };
+
+    const menuhandler = ()=> {
+        setmenu(!menu);
+    }
+
     return (
         <div>
             <div className='navbar_div'>
                 <div>
                     <input type='text' placeholder='Search here' />
                     <SearchIcon className="Search_icon_input"/>
-                    <CloseIcon className='close_icon'/>
+                    <CloseIcon onClick={inputhandler} className='close_icon'/>
                 </div>
 
                 <div>
                     <div className="navbar_main">
-                        <div>
+                        <div onClick={inputhandler}>
                             <div>
                                 {" "}
                             <SearchIcon className="Search_icon"/> {" "}
                             </div>
-                            <MenuIcon className="menu_icon"/>
+                            <MenuIcon onClick={menuhandler} className="menu_icon"/>
                         </div>
 
                         <div>
@@ -32,7 +43,7 @@ const Navbar = () => {
                         </div>
 
                         <div className="bad_search">
-                            <SearchIcon className='Search_icon2'/>
+                            <SearchIcon onClick={inputhandler} className='Search_icon2'/>
                             {/* local icon */}
                             <LocalMallIcon className="bag_icon"/>
                         </div>
@@ -44,14 +55,6 @@ const Navbar = () => {
                         <Link to="/privacy" className="link">Privacy</Link>
                         <Link to="/loginform" className="link">Login</Link>
                         <Link to="/signup" className="link">SignUp</Link>
-                    </div>
-
-                    <div>
-                        <Link to="/" className="sidebar_link">Home</Link>
-                        <Link to="/contact" className="sidebar_link">Contact</Link>
-                        <Link to="/privacy" className="sidebar_link">Privacy</Link>
-                        <Link to="/loginform" className="sidebar_link">Login</Link>
-                        <Link to="/signup" className="sidebar_link">SignUp</Link>
                     </div>
 
                 </div>
