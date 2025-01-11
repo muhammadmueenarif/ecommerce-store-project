@@ -8,4 +8,5 @@ in navbar, it should move to that page. as we use a href="" in html but we use l
 of a tag. 
 
 to add icons, we can use material ui or other websites. use command from material ui website npm install @mui/material @emotion/react @emotion/styled
-to install it
+to install it. 
+https://mui.com/material-ui/material-icons/ search icon here that you want to use. copy that and import it code. 
