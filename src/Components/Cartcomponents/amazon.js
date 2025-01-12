@@ -2,13 +2,7 @@ import React, { useState } from "react";
 import list from "../data";
 import Shopcart from "./shopcart";
 import "../styles/amazon.css";
-const Amazon = () => {
-  const [cart, setCart] = useState([]);
-
-  const handleClick = (item) => {
-    cart.push(item)
-  };
-
+const Amazon = ({handleClick}) => {
   return (
     <section>
       {list.map((list) => (
