@@ -19,7 +19,7 @@ const Shopcart = ({ item, handleClick }) => {
                 </div>
                 <div className="details">
                     <p>{title}</p>
-                    <p>Price: {price}$</p>
+                    <p>Price:$ {price}</p>
                     <button onClick={()=>handleClick(item)}>Add to Cart</button>
                 </div>
             </div>
