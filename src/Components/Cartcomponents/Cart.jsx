@@ -14,29 +14,36 @@ const Cart = ({cart, setCart, handlechange}) => {
         cart.map((item)=> (ans += item.price*item.amount));
         setprice(ans);
     };
+
     useEffect(()=>{
         handlePrice();
     })
+
   return (
     <div>
       <article>
-        {
-            cart.map((item) => (
-              <div className='cart_box'>
+        { cart?.map((item) => (
+              <div className='cart_box' key={item.id}>
                <div className='cart_img'>
                  <img src={item.img} alt={item.title} />
-                 <p>{item.img}</p>
+                 <p>{item.title}</p>
                </div>
+
                <div>
-                <button onClick={()=> handlePrice(item, 1)}>+</button>
-                <button onClick={()=> handlePrice(item, -1)}>-</button>
+                <button onClick={()=> handlechange(item, +1)}>+</button>
+                <button>{item.amount}</button>
+                <button onClick={()=> handlechange(item, -1)}>-</button>
+               </div>
+
+               <div>
                 <button onClick={()=> handleremove(item.id)}>Remove</button>
                </div>
+
               </div>
             ))}
             <div className="total">
                 <span>Total price of the cart</span>
-                <span>$ {price}</span>
+                <span>$ = {price}</span>
             </div>
       </article>
     </div>
